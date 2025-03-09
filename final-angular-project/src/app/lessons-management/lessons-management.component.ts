@@ -36,20 +36,14 @@ export class LessonsManagementComponent {
     });
   }
   ngOnInit(): void {
-    this.lessonService.getLessons(this.lessonForm.value.courseId).subscribe((response) => {
-      console.log("response from API:", response);
-      this.lessons = response;
+    // this.lessonService.getLessons(this.lessonForm.value.courseId).subscribe((response) => {
+    //   console.log("response from API:", response);
+    //   this.lessons = response;
 
-    })
+    // })
+    this.loadCourses();
   }
 
-  addLesson() {
-    const { courseId, title, content } = this.lessonForm.value;
-    this.lessonService.createLesson(courseId, { title, content }).subscribe(response => {
-      alert('Lesson added successfully!');
-      this.loadLessons();
-    });
-  }
   loadCourses() {
     this.coursesService.getAllCourses().subscribe({
       next: (courses) => {
@@ -68,6 +62,7 @@ export class LessonsManagementComponent {
         next: (lessons) => {
           this.lessons = lessons;
         },
+
         error: (err) => {
           console.error('Error loading lessons:', err);
         }
@@ -79,6 +74,13 @@ export class LessonsManagementComponent {
     const { courseId, lessonId } = this.lessonForm.value;
     this.lessonService.deleteLesson(courseId, lessonId).subscribe(response => {
       alert('Lesson deleted successfully!');
+      this.loadLessons();
+    });
+  }
+  addLesson() {
+    const { courseId, title, content } = this.lessonForm.value;
+    this.lessonService.createLesson(courseId, { title, content }).subscribe(response => {
+      alert('Lesson added successfully!');
       this.loadLessons();
     });
   }
