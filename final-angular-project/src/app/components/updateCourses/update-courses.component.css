@@ -1,0 +1,71 @@
+/* עיצוב לכפתורים */
+button.turquoise-button {
+    background: rgb(128, 202, 198) !important;
+    color: rgb(12, 12, 12) !important;
+    padding: 12px 25px; /* padding להגדלת גובה ורוחב הכפתור */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    min-width: 140px; /* הכפתור לא יהיה קטן מדי */
+    height: 45px; /* גובה קבוע לכפתור */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: normal; /* לוודא שאין חפיפות בטקסט */
+}
+
+/* שינוי צבע הכפתור בעת hover */
+button.turquoise-button:hover {
+    background: rgb(100, 180, 175) !important;
+}
+
+/* כפתור מחיקה */
+button.gray-button {
+    background: rgb(200, 200, 200) !important;
+    color: black !important;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    min-width: 140px;
+    height: 45px;
+}
+
+button.gray-button:hover {
+    background: rgb(180, 180, 180) !important;
+}
+
+/* עיצוב לטפסים */
+.form-container {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* שדות טופס מלאים (form fields) */
+.mat-form-field {
+    width: 100%;
+    margin-bottom: 20px; /* מרווח בין השדות */
+}
+
+.mat-form-field input {
+    font-size: 16px;
+}
+
+/* שגיאות טופס */
+mat-error {
+    color: red;
+}
+
+/* עיצוב הכלליות של כרטיס */
+mat-card {
+    margin-top: 20px;
+}
+    

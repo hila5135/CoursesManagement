@@ -1,0 +1,13 @@
+<p>my-courses works!</p>
+
+@if(Lessons == null || Lessons.length == 0)
+{
+    <p>no lessons</p>
+}
+
+@for (l of this.Lessons; track l.courseId) {
+course id:{{l.courseId}}
+lesson id :{{l.id}}
+title: {{l.title}}
+content: {{l.content}}
+}

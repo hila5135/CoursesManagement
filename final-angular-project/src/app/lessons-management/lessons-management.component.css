@@ -1,0 +1,55 @@
+.lesson-container {
+    max-width: 500px;
+    margin: 30px;
+    padding: 20px;
+    background: #eaecec;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #605757;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.full-width {
+    width: 100%;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    width: 30%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.turquoise-btn {
+    background: rgb(128, 202, 198) !important;
+    color: rgb(12, 12, 12) !important;
+}
+
+.accent-btn {
+    background:  rgb(128, 202, 198) !important; 
+    color: rgb(8, 8, 8) !important ;
+}
+
+.warn-btn {
+    background:  rgb(128, 202, 198) !important;
+    color: rgb(4, 4, 4) !important;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  

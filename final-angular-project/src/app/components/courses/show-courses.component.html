@@ -1,0 +1,27 @@
+<p>show-courses works!</p>
+<mat-card class="courses-card">
+    <mat-card-title>Courses</mat-card-title>
+    <mat-card-content>
+        <mat-list>
+            @for(course of courses; track course.id){
+            <mat-list-item class="course-item">
+                <div class="course-details">
+                    <span class="turquoise-text">id:</span> {{course.id}}    
+                    <span class="turquoise-text">title:</span>  
+                    <a class="course-link" [routerLink]="['/courses', course.id]">{{ course.title }}</a>
+                    <span class="turquoise-text">description:</span> {{course.description}}
+                </div>
+                
+                <div class="button-group">
+                    <button mat-raised-button class="turquoise-btn" (click)="JoinCourse(course.id)">
+                        enroll
+                    </button>
+                    <button mat-raised-button class="turquoise-btn" (click)="LeaveCourse(course.id)">
+                        unenroll
+                    </button>
+                </div>
+            </mat-list-item>
+            }
+        </mat-list>
+    </mat-card-content>
+</mat-card>

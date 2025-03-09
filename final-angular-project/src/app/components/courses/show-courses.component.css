@@ -1,0 +1,72 @@
+/* .turquoise-text {
+    color: rgb(108, 181, 177);
+    font-weight: thin;
+}
+
+.turquoise-btn {
+    background: rgb(128, 202, 198) !important;
+    color: rgb(12, 12, 12) !important;
+    height: 22px;
+    font-size: 16px;
+    font-weight: thin;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    line-height: 0.5
+}
+
+.turquoise-btn:hover {
+    background: rgb(100, 180, 175) !important;
+} */
+/* עיצוב הכללי של הכרטיס */
+.courses-card {
+    margin: 20px left;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+}
+
+/* עיצוב הכפתורים */
+button.turquoise-btn {
+    margin-left: 10px;
+    background: rgb(128, 202, 198) !important;
+    color: rgb(12, 12, 12) !important;
+    padding: 12px 25px; /* padding להגדלת גובה ורוחב הכפתור */
+    font-size: 16px;
+    font-weight: thin;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    min-width: 140px; /* הכפתור לא יהיה קטן מדי */
+    height: 25px; /* גובה קבוע לכפתור */
+    display: inline-flex;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    margin-bottom: 20px;
+    line-height: normal; /* לוודא שאין חפיפות בטקסט */
+}
+
+/* שינוי צבע הכפתור בעת hover */
+button.turquoise-btn:hover {
+    background: rgb(100, 180, 175) !important;
+}
+
+/* עיצוב למרווחים מסביב לכפתורים */
+mat-list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* עיצוב של הטקסט - id, title, description */
+.turquoise-text {
+    color: rgb(128, 202, 198);
+    font-weight: thin;
+}
