@@ -29,10 +29,8 @@ export class LoginSignComponent implements OnInit {
     if (routeParams === 'login') {
       this.isLogin = true;
     }
-    // localStorage.setItem('token', '');
     const storedRole = sessionStorage.getItem('role');
-   console.log('Loaded Role:', storedRole);
-    // sessionStorage.setItem('token', '');
+    console.log('Loaded Role:', storedRole);
   }
   toggleMode() {
     this.isLogin = !this.isLogin;
@@ -44,7 +42,7 @@ export class LoginSignComponent implements OnInit {
       const password = this.SignInForm.value.password as string;
       const role = this.SignInForm.value.role as string;
       if (this.isLogin) {
-        const user = { email, password};
+        const user = { email, password };
         this.authService.login(user.email, user.password).subscribe({
           next: (res) => {
             console.log('login response', res);

@@ -9,11 +9,7 @@ import { application } from 'express';
 export class AuthService {
 private url = 'http://localhost:3000/api/auth';
   constructor(private http: HttpClient) { } 
-  
-  // login(credentials: { email: string, password: string }): Observable<any> {
-  //   return this.http.post(`${this.url}/login`, credentials);
-  //   // Headers: new HttpHeaders ({'Content-Type':'application/json'})
-  // }
+ 
   login(email: string, password: string): Observable<any> {
     const body = {
       email: email,
@@ -41,34 +37,5 @@ console.log("in service",body.role);
     })
   });
 }
-  // register(user: { email: string; password: string, name: string , role: string }): Observable<any> {
-  //   return this.http.post(`${this.url}/register`, user);
-  // }
-  // logout() {
-  //   localStorage.removeItem('token'); 
-  // }
-  // isAuthenticated(): boolean {
-  //   return !!localStorage.getItem('token'); 
-  // }
-
-  //   getUserData() {
-  //     const token = localStorage.getItem('token');
-  //     if (!token) return null;
-  //     return jwtDecode(token);
-  //   }
-
-
-
-  // private baseUrl = 'http://localhost:3000/api/auth';
-
-  // constructor(private http: HttpClient) {}
-
-  // register(user:any):Observable<any>{
-  //   return this.http.post(`${this.baseUrl}/register`,user)
-  // }
-  // login(user:any):Observable<any>{
-  //   return this.http.post(`${this.baseUrl}/login`,user)
-  // }
-
 }
 

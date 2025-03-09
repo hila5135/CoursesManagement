@@ -1,184 +1,7 @@
-<!-- <p>update-courses works!</p>
-<div>
-    @for (course of courses; track course.courseId) {
-    <div>
-        <span>{{ course.courseId }} - {{ course.title }}</span>
-        <button (click)="editCourse(course)">Edit</button>
-        <button (click)="remove(course.courseId)">Remove</button>
-    </div>
-    }
-
-    <form (submit)="addCourse()">
-        <input type="text" [(ngModel)]="newCourse.title" placeholder="Course Title" required />
-        <input type="text" [(ngModel)]="newCourse.description" placeholder="Course Description" required />
-        <button type="submit">Add Course</button>
-    </form>
-
-    @if (editingCourse) {
-    <form (submit)="updateCourse()">
-        <input type="text" [(ngModel)]="editingCourse.title" required />
-        <input type="text" [(ngModel)]="editingCourse.description" required />
-        <button type="submit">Update</button>
-        <button type="button" (click)="cancelEdit()">Cancel</button>
-    </form>
-    }
-</div> -->
-
-<!-- מרותי -->
-<!-- <p>update-courses works!</p>
-<div>
-    @for (course of this.courses; track course.courseId) {
-        <div>
-            <span>{{ course.courseId }} - {{ course.title }}</span>
-            <button (click)="editCourse(course)">Edit</button>
-            <button (click)="remove(course.courseId)">Remove</button>
-        </div>
-    }
-
-    <form (submit)="addCourse()">
-        <input type="text" [(ngModel)]="newCourse.title" name="courseTitle" placeholder="Course Title" required />
-        <input type="text" [(ngModel)]="newCourse.description" name="courseDescription" placeholder="Course Description" required />
-        <button type="submit">Add Course</button>
-    </form>
-
-    @if (editingCourse) {
-        <form (submit)="updateCourse()">
-            <input type="text" [(ngModel)]="editingCourse.title" name="editCourseTitle" required />
-            <input type="text" [(ngModel)]="editingCourse.description" name="editCourseDescription" required />
-            <button type="submit">Update</button>
-            <button type="button" (click)="cancelEdit()">Cancel</button>
-        </form>
-    }
-</div> -->
-<!-- מתמר -->
-<!-- <mat-card>
-    <mat-card-title>Courses</mat-card-title>
-    <mat-card-content>
-        <mat-list>
-            @for(course of courses; track course.courseId){
-            <mat-list-item>
-                <a [routerLink]="['/courses', course.courseId]">{{ course.title }}</a>
-                {{course.courseId}}
-            </mat-list-item>
-            }
-        </mat-list>
-    </mat-card-content>
-</mat-card> -->
-<!-- <button mat-button (click)="addClick()">add course</button>
-<button mat-button (click)="deleteClick()">delete course</button>
-<button mat-button (click)="updateClick()">change course</button>
-
-@if(addFlag && !isForbidden){
-<form [formGroup]="myForm" (ngSubmit)="onSubmitAdd()" class="form-container">
-    <mat-card>
-        <mat-card-content>
-
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>Title</mat-label>
-                <input matInput formControlName="title" />
-                @if(myForm.get('title')?.hasError('required')){
-                <mat-error>
-                    title is required.
-                </mat-error>}
-            </mat-form-field>
-
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>content</mat-label>
-                <input matInput type="text" formControlName="content" />
-                @if(myForm.get('content')?.hasError('required')){
-                <mat-error>
-                    Password is required.
-                </mat-error>}
-            </mat-form-field>
-        </mat-card-content>
-        <mat-card-actions>
-            <button mat-raised-button color="primary" type="submit" [disabled]="myForm.invalid">
-                add
-            </button> -->
-            <!-- <button mat-raised-button class="turquoise-button" (click)="addClick()">
-                ➕ Add Course</button>
-        </mat-card-actions>
-    </mat-card>
-</form>
-}
-
-@if(deleteFlag && !isForbidden){
-<form [formGroup]="myForm" (ngSubmit)="onSubmitDelete()" class="form-container">
-    <mat-card>
-        <mat-card-content>
-
-            <mat-form-field appearance="outline" class="full-width">
-                <mat-label>id of the course you want delete</mat-label>
-                <input matInput formControlName="id" />
-                @if(myForm.get('id')?.hasError('required')){
-                <mat-error>
-                    title is required.
-                </mat-error>}
-            </mat-form-field>
-        </mat-card-content>
-        <mat-card-actions> -->
-            <!-- <button mat-raised-button color="primary" type="submit" [disabled]="myForm.invalid">
-                delete
-            </button>
-             -->
-             <!-- <button mat-raised-button class="gray-button" (click)="deleteClick()">❌ Delete Course</button>
-        </mat-card-actions>
-
-    </mat-card>
-</form>
-
-}
-
-@if(updateFlag && !isForbidden){
-    <form [formGroup]="myForm" (ngSubmit)="onSubmitUpdate()" class="form-container">
-        <mat-card>
-            <mat-card-content>
-                <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>id</mat-label>
-                    <input matInput formControlName="id" />
-                    @if(myForm.get('id')?.hasError('required')){
-                    <mat-error>
-                        title is required.
-                    </mat-error>}
-                </mat-form-field>
-
-                <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>Title</mat-label>
-                    <input matInput formControlName="title" />
-                    @if(myForm.get('title')?.hasError('required')){
-                    <mat-error>
-                        title is required.
-                    </mat-error>}
-                </mat-form-field>
-    
-                <mat-form-field appearance="outline" class="full-width">
-                    <mat-label>content</mat-label>
-                    <input matInput type="text" formControlName="content" />
-                    @if(myForm.get('content')?.hasError('required')){
-                    <mat-error>
-                        Password is required.
-                    </mat-error>}
-                </mat-form-field>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-raised-button color="primary" type="submit" [disabled]="myForm.invalid">
-                    update
-                </button> -->
-                <!-- <button mat-raised-button class="turquoise-button" (click)="updateClick()">✏️ Update Course</button>
-            </mat-card-actions>
-        </mat-card>
-    </form>
-}
-
-@if(isForbidden){
-    <div>you are forbidden do this action</div>
-} -->
-
 <button mat-button (click)="addClick()">add course</button>
 <button mat-button (click)="deleteClick()">delete course</button>
 <button mat-button (click)="updateClick()">change course</button>
 
-<!-- Form Add Course -->
 @if(addFlag && !isForbidden) {
     <form [formGroup]="myForm" (ngSubmit)="onSubmitAdd()" class="form-container">
         <mat-card>
@@ -204,7 +27,6 @@
     </form>
 }
 
-<!-- Form Delete Course -->
 @if(deleteFlag && !isForbidden) {
     <form [formGroup]="myForm" (ngSubmit)="onSubmitDelete()" class="form-container">
         <mat-card>
@@ -223,7 +45,6 @@
     </form>
 }
 
-<!-- Form Update Course -->
 @if(updateFlag && !isForbidden) {
     <form [formGroup]="myForm" (ngSubmit)="onSubmitUpdate()" class="form-container">
         <mat-card>
@@ -256,7 +77,6 @@
     </form>
 }
 
-<!-- Forbidden Action -->
 @if(isForbidden) {
     <div>You are forbidden to perform this action.</div>
 }

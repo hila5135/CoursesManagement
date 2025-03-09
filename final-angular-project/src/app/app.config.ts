@@ -8,7 +8,6 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { tokenInterceptor } from '../interceptors/token.interceptor';
 
 export const appConfig: ApplicationConfig = {
-  // providers: [provideZoneChangeDetection({ eventCoalescing: true }),
   providers:[
      provideRouter(routes),
       provideClientHydration(),
