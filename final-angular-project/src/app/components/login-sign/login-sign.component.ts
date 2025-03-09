@@ -36,6 +36,10 @@ export class LoginSignComponent implements OnInit {
     this.isLogin = !this.isLogin;
   }
   Submit() {
+    if(!this.SignInForm.valid)
+    {
+      alert('Please fill in all fields password: 6 characters , valid email..');
+    }
     if (this.SignInForm.valid) {
       const name = this.SignInForm.value.name as string;
       const email = this.SignInForm.value.email as string;
